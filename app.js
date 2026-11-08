@@ -21,6 +21,8 @@ let storedSaved=[];try{storedSaved=JSON.parse(localStorage.getItem(savedStorageK
 let resumeRequest=0;
 let resumeText='',resumeEvidence={},resumeProfile={},resumeAnalysisCache=new Map();
 const state={season:'all',path:'all',kind:isSociology?'all':'internship',category:'all',query:'',location:'',remote:false,focus:'all',paid:false,saved:new Set(storedSaved),resumeSkills:new Set(),broadPage:1,page:1,pageSize:20,region:'',mode:'all',compensation:'all',postedDays:'all',trusted:false,metro:readLocal('path49-location-scope',{metro:true}).metro!==false,exactLocation:null};
+const cityParam=new URLSearchParams(window.location?.search||'').get('city');
+if(cityParam&&findCitySearch(cityParam)){state.location=cityParam;state.kind='internship';state.metro=true;}
 const programs=isSociology?[]:[
   {title:'Summer Undergraduate Psychology Experience in Research (SUPER)',org:'American Psychological Association',place:'Remote mentorship with a faculty host',status:'2027 applications expected late November or early December 2026 · deadline March 1, 2027',date:'Summer 2027',url:'https://www.apa.org/science/programs/super-fellowship',type:'Psychology research fellowship'},
   {title:'Undergraduate Summer Internship',org:'Pace University Counseling Center',place:'New York, NY',status:'Summer dates posted · application details on program page',date:'May 19 – July 23, 2027',url:'https://www.pace.edu/counseling/psychology-training-programs/undergraduate-summer-internship',type:'Psychology'},
@@ -356,6 +358,7 @@ async function processResume(file){
  status.textContent=`${state.resumeSkills.size} skill areas found. Requirements reviews are now available on each role. No qualification or acceptance probability is calculated.`;
  render();
 }
+if(state.location){$('#location-input').value=state.location;$('#opportunity-kind').value=state.kind;}
 document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#search-input').focus()}if(e.key==='Escape'){$('#search-input').blur();$('#location-input').blur()}});render();
 
 fetch('./local-programs.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Local program feed unavailable');return r.json()}).then(data=>{

@@ -401,7 +401,14 @@
       "employer": "International Rescue Committee",
       "url": "https://theirc.wd1.myworkdayjobs.com/en-US/External_Careers",
       "verifiedAt": "2026-11-06",
-      "evidence": "Verified employer API with full job descriptions, application state and closing dates; undergraduate case-management, youth and community-health internships."
+      "evidence": "Verified employer API with full job descriptions, application state and closing dates; undergraduate case-management, youth and community-health internships.",
+      "searches": [
+        "\"intern\"",
+        "internship",
+        "\"research assistant\"",
+        "\"student research\"",
+        "\"community outreach\""
+      ]
     },
     {
       "id": "axiomspace.wd5.myworkdayjobs.com|axiomspace|External_Career_Site",
@@ -412,12 +419,23 @@
       "count": 156
     },
     {
-      "id": "aah.wd5.myworkdayjobs.com|aah|external",
+      "id": "aah.wd115.myworkdayjobs.com|aah|External",
       "employer": "Advocate Health",
-      "url": "https://aah.wd5.myworkdayjobs.com/en-US/external",
-      "verifiedAt": "2026-11-06",
-      "evidence": "Official employer Workday board verified via public internship search API.",
-      "count": 1012
+      "url": "https://aah.wd115.myworkdayjobs.com/en-US/External",
+      "verifiedAt": "2026-11-08",
+      "evidence": "Current official Advocate Health posting links its apply action to aah.wd115. Verified public API; replaces the old wd5 host returning HTTP 410.",
+      "count": 1012,
+      "searches": [
+        "\"intern\"",
+        "internship",
+        "\"research assistant\"",
+        "\"student research\"",
+        "\"community outreach\""
+      ],
+      "fetchInternshipDetails": true,
+      "replaces": [
+        "aah.wd5.myworkdayjobs.com|aah|external"
+      ]
     },
     {
       "id": "lifefitness.wd1.myworkdayjobs.com|lifefitness|searchLFN",
@@ -482,6 +500,165 @@
       "verifiedAt": "2026-11-06",
       "evidence": "Official employer Workday board verified via public internship search API.",
       "count": 155
+    },
+    {
+      "id": "nc.wd108.myworkdayjobs.com|nc|nc_careers",
+      "employer": "State of North Carolina",
+      "url": "https://nc.wd108.myworkdayjobs.com/nc_careers",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "searches": [
+        "\"intern\"",
+        "internship",
+        "\"research assistant\"",
+        "\"student research\"",
+        "\"community outreach\""
+      ]
+    },
+    {
+      "id": "wfu.wd1.myworkdayjobs.com|wfu|Staff_Career_Website_live",
+      "employer": "Wake Forest University",
+      "url": "https://wfu.wd1.myworkdayjobs.com/en-US/Staff_Career_Website_live",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "searches": [
+        "\"intern\"",
+        "internship",
+        "\"research assistant\"",
+        "\"student research\"",
+        "\"community outreach\""
+      ]
+    },
+    {
+      "id": "wf.wd1.myworkdayjobs.com|wf|wellsfargojobs",
+      "employer": "Wells Fargo",
+      "url": "https://wf.wd1.myworkdayjobs.com/en-US/wellsfargojobs",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "fetchInternshipDetails": true
+    },
+    {
+      "id": "dukeenergy.wd1.myworkdayjobs.com|dukeenergy|search",
+      "employer": "Duke Energy",
+      "url": "https://dukeenergy.wd1.myworkdayjobs.com/en-US/search",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "fetchInternshipDetails": true
+    },
+    {
+      "id": "northeastern.wd1.myworkdayjobs.com|northeastern|careers",
+      "employer": "Northeastern University",
+      "url": "https://northeastern.wd1.myworkdayjobs.com/en-US/careers",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "searches": [
+        "\"intern\"",
+        "internship",
+        "\"research assistant\"",
+        "\"student research\"",
+        "\"community outreach\""
+      ]
+    },
+    {
+      "id": "tamus.wd1.myworkdayjobs.com|tamus|System-wide_External",
+      "employer": "Texas A&M University System",
+      "url": "https://tamus.wd1.myworkdayjobs.com/en-US/System-wide_External",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "searches": [
+        "\"intern\"",
+        "internship",
+        "\"research assistant\"",
+        "\"student research\"",
+        "\"community outreach\""
+      ]
+    },
+    {
+      "id": "emerson.wd5.myworkdayjobs.com|emerson|Emerson_College_Staff",
+      "employer": "Emerson College",
+      "url": "https://emerson.wd5.myworkdayjobs.com/en-US/Emerson_College_Staff",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "searches": [
+        "\"intern\"",
+        "internship",
+        "\"research assistant\"",
+        "\"student research\"",
+        "\"community outreach\""
+      ]
+    },
+    {
+      "id": "assurant.wd1.myworkdayjobs.com|assurant|Assurant_Careers",
+      "employer": "Assurant",
+      "url": "https://assurant.wd1.myworkdayjobs.com/en-US/Assurant_Careers",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "fetchInternshipDetails": true
+    },
+    {
+      "id": "dowjones.wd1.myworkdayjobs.com|dowjones|dow_jones_career",
+      "employer": "Dow Jones",
+      "url": "https://dowjones.wd1.myworkdayjobs.com/en-US/dow_jones_career",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "fetchInternshipDetails": true
+    },
+    {
+      "id": "brookfield.wd5.myworkdayjobs.com|brookfield|ggp",
+      "employer": "Brookfield Properties",
+      "url": "https://brookfield.wd5.myworkdayjobs.com/en-US/ggp",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector."
+    },
+    {
+      "id": "archgroup.wd1.myworkdayjobs.com|archgroup|Careers",
+      "employer": "Arch Capital Group",
+      "url": "https://archgroup.wd1.myworkdayjobs.com/en-US/Careers",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "fetchInternshipDetails": true
+    },
+    {
+      "id": "theocc.wd5.myworkdayjobs.com|theocc|careers",
+      "employer": "Options Clearing Corporation",
+      "url": "https://theocc.wd5.myworkdayjobs.com/en-US/careers",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "fetchInternshipDetails": true
+    },
+    {
+      "id": "adobe.wd5.myworkdayjobs.com|adobe|external_experienced",
+      "employer": "Adobe",
+      "url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced",
+      "evidence": "Official employer postings found during undergraduate source coverage review; API health recorded by the daily collector.",
+      "fetchInternshipDetails": true
+    },
+    {
+      "id": "rand.wd5.myworkdayjobs.com|rand|External_Career_Site",
+      "employer": "RAND",
+      "url": "https://rand.wd5.myworkdayjobs.com/External_Career_Site/",
+      "searches": [
+        "\"intern\"",
+        "internship",
+        "\"research assistant\"",
+        "\"survey research\""
+      ],
+      "fetchInternshipDetails": true,
+      "evidence": "Official employer career link or employer job posting. Full descriptions screened; advanced-degree research positions are excluded."
+    },
+    {
+      "id": "fhi.wd1.myworkdayjobs.com|fhi|FHI_360_External_Career_Portal",
+      "employer": "FHI 360",
+      "url": "https://fhi.wd1.myworkdayjobs.com/FHI_360_External_Career_Portal",
+      "searches": [
+        "\"intern\"",
+        "internship",
+        "\"research assistant\"",
+        "\"survey research\""
+      ],
+      "fetchInternshipDetails": true,
+      "evidence": "Official employer career link or employer job posting. Full descriptions screened; advanced-degree research positions are excluded."
+    },
+    {
+      "id": "icf.wd5.myworkdayjobs.com|icf|ICFExternal_Career_Site",
+      "employer": "ICF",
+      "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site",
+      "searches": [
+        "\"intern\"",
+        "internship",
+        "\"research assistant\"",
+        "\"survey research\""
+      ],
+      "fetchInternshipDetails": true,
+      "evidence": "Official employer career link or employer job posting. Full descriptions screened; advanced-degree research positions are excluded."
     }
   ],
   "smartrecruiters": [
@@ -540,6 +717,31 @@
       "url": "https://api.smartrecruiters.com/v1/companies/AHRCNYC/postings?limit=1",
       "verifiedAt": "2026-11-06",
       "evidence": "Public employer API returned current postings. Filtered for psychology-aligned undergraduate internships; a working board need not have a matching role."
+    }
+  ],
+  "jibe": [
+    {
+      "id": "rti-international",
+      "employer": "RTI International",
+      "url": "https://careers.rti.org",
+      "searches": [
+        "intern",
+        "research assistant",
+        "survey"
+      ],
+      "evidence": "Official RTI careers site public postings API; all descriptions screened for undergraduate eligibility."
+    },
+    {
+      "id": "novant-health",
+      "employer": "Novant Health",
+      "url": "https://jobs.novanthealth.org",
+      "searches": [
+        "intern",
+        "research assistant",
+        "behavioral health",
+        "human resources"
+      ],
+      "evidence": "Official Novant Health careers site public postings API; clinical professional and nursing requirements excluded by screening."
     }
   ]
 }

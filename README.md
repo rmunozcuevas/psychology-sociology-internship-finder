@@ -106,3 +106,13 @@ python3 -m py_compile backend/*.py
 ```
 
 Checks cover requisition deduplication, vendor-host validation, Workday pagination/closures, eligibility, community freshness, focused versus broader relevance, and frontend counts/filtering/pagination. See [CONTRIBUTING.md](CONTRIBUTING.md) to suggest an official source or report a false positive. Do not manually insert listings or count ordinary jobs as internships to meet an inventory target.
+
+### Source coverage and history
+
+The public [source coverage page](https://rmunozcuevas.github.io/psychology-sociology-internship-finder/sources.html) distinguishes a successful source read from a source that actually yields screened undergraduate internship candidates. It includes metro counts for both disciplines, source search/status filters, pagination, scan timestamps, and separately marked failed-source carryovers. Totals deduplicate application URLs across both fields; discipline totals can overlap.
+
+After collection and availability checks, `node scripts/source-coverage.mjs` updates `data/source-history.sqlite` and publishes `api/source-coverage.json`. The SQLite database is durable, checked into the repository, and contains only public job/source information. It stores sources, runs, source yield/errors, screened jobs, and per-run observations. The latest 35 snapshots are retained. The initial import establishes a baseline; subsequent snapshots show additions and removals from the feed (not necessarily employer closures). Rebuilding the same snapshot is idempotent. Resumes and application notes never enter this database.
+
+The scheduled workflow runs at **12 PM America/New_York** daily; completion depends on collection time and GitHub's scheduler. SQLite and the JSON report are published with the static site. This does not require the optional PostgreSQL service or an API key. Python 3 and Node 22 are sufficient to build the coverage report.
+
+Curated Workday boards can define `searches` for student/research placements and `fetchInternshipDetails` to screen titles that only reveal eligible majors in their full description. `replaces` suppresses obsolete discovered board IDs after an employer migration. Workday location extraction includes the requisition's location descriptor and additional locations. Public employer career APIs using Jibe/iCIMS Attract are collected by `scripts/jibe.mjs`, including bounded pagination and full-description eligibility screening. A zero-yield board remains visible as zero; adding a board does not imply adding an internship.

@@ -1,7 +1,58 @@
 [
-  {"title":"Summer internship cohort","org":"Psychology For All","url":"https://www.psychologyforall.org/internships.html","eligibility":"Charlotte-area undergraduates encouraged; unpaid, mostly remote with some local attendance.","section":"Are you looking for an internship"},
-  {"title":"Nonclinical seasonal internships","org":"Mental Health America of Central Carolinas","url":"https://mhaofcc.org/get-involved/volunteer","eligibility":"Inquire about undergraduate advocacy, education or community placements. Clinical supervision is for specified graduate programs.","section":"Internships"},
-  {"title":"Summer and semester undergraduate internships","org":"Charlotte Community Health Clinic","url":"https://charlottecommunityhealth.org/en/get-involved/internships-and-rotations/","eligibility":"General undergraduate internships include outreach, public health and social-work support; separate restricted fellowships are not included.","section":"Summer and Semester internships"},
-  {"title":"Wellness Internship Program","org":"UNC Charlotte Center for Wellness Promotion","url":"https://wellness.charlotte.edu/about-cwp/join-our-student-team","eligibility":"UNC Charlotte undergraduates considered; unpaid semester placement, sometimes offered in summer. Confirm 2027 availability.","section":"Wellness Internship Program"},
-  {"title":"SECU Public Fellows Intern Program","org":"UNC Charlotte Career Center","url":"https://career.charlotte.edu/secu-public-fellows-intern-program","eligibility":"UNC Charlotte undergraduate and North Carolina residency required. Placement duties vary; prioritize community and human services.","section":"The SECU Public Fellows"}
+  {
+    "title": "Summer internship cohort",
+    "org": "Psychology For All",
+    "url": "https://www.psychologyforall.org/internships.html",
+    "eligibility": "Charlotte-area undergraduates encouraged; unpaid, mostly remote with some local attendance.",
+    "section": "Are you looking for an internship"
+  },
+  {
+    "title": "Nonclinical seasonal internships",
+    "org": "Mental Health America of Central Carolinas",
+    "url": "https://mhaofcc.org/get-involved/volunteer",
+    "eligibility": "Inquire about undergraduate advocacy, education or community placements. Clinical supervision is for specified graduate programs.",
+    "section": "Internships"
+  },
+  {
+    "title": "Summer and semester undergraduate internships",
+    "org": "Charlotte Community Health Clinic",
+    "url": "https://charlottecommunityhealth.org/en/get-involved/internships-and-rotations/",
+    "eligibility": "General undergraduate internships include outreach, public health and social-work support; separate restricted fellowships are not included.",
+    "section": "Summer and Semester internships"
+  },
+  {
+    "title": "Wellness Internship Program",
+    "org": "UNC Charlotte Center for Wellness Promotion",
+    "url": "https://wellness.charlotte.edu/about-cwp/join-our-student-team",
+    "eligibility": "UNC Charlotte undergraduates considered; unpaid semester placement, sometimes offered in summer. Confirm 2027 availability.",
+    "section": "Wellness Internship Program"
+  },
+  {
+    "title": "SECU Public Fellows Intern Program",
+    "org": "UNC Charlotte Career Center",
+    "url": "https://career.charlotte.edu/secu-public-fellows-intern-program",
+    "eligibility": "UNC Charlotte undergraduate and North Carolina residency required. Placement duties vary; prioritize community and human services.",
+    "section": "The SECU Public Fellows"
+  },
+  {
+    "title": "North Carolina State Government Internship Program",
+    "org": "North Carolina Department of Administration",
+    "url": "https://www.doa.nc.gov/divisions/women-youth/state-internship-program",
+    "section": "2027",
+    "eligibility": "Upcoming program lead, not an open job listing. Published 2027 application window: December 1, 2026\u2013January 29, 2027. NC permanent residency, continuing enrollment and GPA requirements apply; confirm the official criteria."
+  },
+  {
+    "title": "Experience Novant Health undergraduate internships",
+    "org": "Novant Health",
+    "url": "https://www.novanthealth.org/student-programs/paid-internships/",
+    "section": "Experience Novant Health",
+    "eligibility": "Undergraduate and graduate project-based placements. Ask about undergraduate nonclinical opportunities and the 2027 application process. Pharmacy and nursing programs have separate professional requirements."
+  },
+  {
+    "title": "SPARQ undergraduate summer research",
+    "org": "Seattle Children\u2019s Research Institute",
+    "url": "https://www.seattlechildrens.org/research/centers-programs/child-health-behavior-and-development/sparq/",
+    "section": "2027",
+    "eligibility": "Upcoming pain and neurologic-health research program lead. Published application window: November 23, 2026\u2013January 8, 2027. Review the official application guidelines and availability requirements; this is not counted as an open internship."
+  }
 ]

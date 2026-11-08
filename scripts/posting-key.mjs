@@ -8,7 +8,7 @@ export function postingKey(value){
   if(/(^|\.)greenhouse\.io$/.test(u.hostname)){const id=parts[parts.indexOf('jobs')+1];if(/^\d+$/.test(id))return `greenhouse:${id}`;}
   if(/(^|\.)lever\.co$/.test(u.hostname)&&parts.length>1)return `lever:${parts[0]}:${parts[1]}`;
   if(u.hostname==='jobs.ashbyhq.com'&&parts.length>1)return `ashby:${parts[0]}:${parts[1]}`;
-  if(u.hostname.endsWith('.myworkdayjobs.com')){const req=parts.at(-1)?.match(/_([^_]+)$/)?.[1]?.replace(/-\d+$/,'');if(req)return `workday:${u.hostname}:${req}`;}
+  if(u.hostname.endsWith('.myworkdayjobs.com')){const req=parts.at(-1)?.match(/_([^_]+)$/)?.[1]?.replace(/-\d+$/,'');if(req)return `workday:${u.hostname==='aah.wd115.myworkdayjobs.com'?'aah.wd5.myworkdayjobs.com':u.hostname}:${req}`;}
   if(u.hostname==='jobs.smartrecruiters.com'&&parts[0]==='oneclick-ui'){
     const company=parts[parts.indexOf('company')+1],publication=parts[parts.indexOf('publication')+1];
     if(company&&publication)return `smartrecruiters:${company.toLowerCase()}:${publication}`;

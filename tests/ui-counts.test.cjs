@@ -6,7 +6,7 @@ const dependencies=Promise.all([import('../listing-quality.mjs'),import('../stud
 test('live counts, sections, pagination and season filters reflect the collected snapshot',async()=>{
  const elements=new Map();
  function element(id){if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',dataset:{},classList:{toggle(){},remove(){},add(){}},setAttribute(){},addEventListener(){},querySelector(){return element(id+' span')},scrollIntoView(){}});return elements.get(id)}
- const context={...await dependencies,console,localStorage:{getItem(){return null}},document:{querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:''},window:{addEventListener(){},FIELDNOTE_API_URL:''},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
+ const context={URLSearchParams,...await dependencies,console,localStorage:{getItem(){return null}},document:{querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:''},window:{addEventListener(){},FIELDNOTE_API_URL:''},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
  vm.createContext(context);
  vm.runInContext(fs.readFileSync('app.js','utf8').replace(/^import .*\n/gm,''),context);
  const data=JSON.parse(fs.readFileSync('opportunities.json'));
@@ -34,7 +34,7 @@ test('live counts, sections, pagination and season filters reflect the collected
 test('sociology uses its own snapshot, filters, counts and saved storage',async()=>{
  const elements=new Map(),keys=[];
  function element(id){if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',dataset:{},classList:{toggle(){},remove(){},add(){}},setAttribute(){},addEventListener(){},querySelector(){return element(id+' span')},scrollIntoView(){}});return elements.get(id)}
- const context={...await dependencies,console,localStorage:{getItem(key){keys.push(key);return null}},document:{body:{dataset:{discipline:'sociology'}},querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:''},window:{addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
+ const context={URLSearchParams,...await dependencies,console,localStorage:{getItem(key){keys.push(key);return null}},document:{body:{dataset:{discipline:'sociology'}},querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:''},window:{addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
  vm.createContext(context);vm.runInContext(fs.readFileSync('app.js','utf8').replace(/^import .*\n/gm,''),context);
  const data=JSON.parse(fs.readFileSync('sociology-opportunities.json'));context.sampleRoles=data.roles;
  vm.runInContext('liveRoles=sampleRoles;liveFeedLoaded=true;render()',context);
@@ -52,7 +52,7 @@ test('resume upload, confirmed profile, reviews and clear work in both directori
   const elements=new Map(),handlers=new Map();
   const fields=Object.fromEntries(['major','school','enrollment','graduation','gpa','availability','certifications'].map(key=>[key,{value:''}]));
   const element=id=>{if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',dataset:{},classList:{toggle(){},remove(){},add(){}},setAttribute(){},addEventListener(name,handler){handlers.set(id+':'+name,handler)},querySelector(){return element(id+' span')},scrollIntoView(){},reset(){Object.values(fields).forEach(f=>f.value='')},elements:{namedItem(key){return fields[key]}},reportValidity(){return true}});return elements.get(id)};
-  const context={...await dependencies,...engine,console,localStorage:{getItem(){return null},setItem(){throw Error('Resume must not be persisted')}},document:{body:{dataset:{discipline}},querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:''},window:{addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
+  const context={URLSearchParams,...await dependencies,...engine,console,localStorage:{getItem(){return null},setItem(){throw Error('Resume must not be persisted')}},document:{body:{dataset:{discipline}},querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:''},window:{addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
   vm.createContext(context);vm.runInContext(fs.readFileSync('app.js','utf8').replace(/^import .*\n/gm,''),context);
   context.roles=[{id:'example',title:'Research Intern',org:'Example',description:'Minimum GPA of 3.5 required. Research experience preferred.',type:discipline,careerPath:'Related experience',opportunityKind:'internship',skills:['Research methods'],url:'https://example.org/job'}];
   vm.runInContext('liveRoles=roles;liveFeedLoaded=true;',context);
@@ -76,7 +76,7 @@ test('resume upload, confirmed profile, reviews and clear work in both directori
 
 test('posting dates use source dates, preserve calendar day and never substitute first-seen dates',async()=>{
  const element=()=>({value:'',textContent:'',innerHTML:'',dataset:{},classList:{toggle(){},remove(){},add(){}},setAttribute(){},addEventListener(){},querySelector:element});
- const context={...await dependencies,console,localStorage:{getItem(){return null}},document:{querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:''},window:{addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
+ const context={URLSearchParams,...await dependencies,console,localStorage:{getItem(){return null}},document:{querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:''},window:{addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
  vm.createContext(context);vm.runInContext(fs.readFileSync('app.js','utf8').replace(/^import .*\n/gm,''),context);
  const dates=role=>{context.dateRole=role;return vm.runInContext('postingDates(dateRole)',context)};
  assert.equal(dates({datePosted:'2026-11-01T00:00:00Z',source:'Workday'}).posted.label,'Nov 1, 2026');
@@ -92,7 +92,7 @@ test('preferences, advanced filters, shared tracker and new-listing inbox work t
  const elements=new Map(),handlers=new Map(),storage=new Map();
  const selected=[{value:'Research / human behavior',checked:true}];
  const element=id=>{if(!elements.has(id))elements.set(id,{value:'',checked:false,textContent:'',innerHTML:'',dataset:{},classList:{toggle(){},remove(){},add(){},contains(){return false}},setAttribute(){},addEventListener(name,handler){handlers.set(id+':'+name,handler)},querySelector(){return element(id+' span')},scrollIntoView(){}});return elements.get(id)};
- const context={...await dependencies,console,localStorage:{getItem(key){return storage.get(key)||null},setItem(key,value){storage.set(key,value)}},document:{body:{dataset:{}},querySelector:element,querySelectorAll(selector){return selector.includes('preferred-path')?selected:[]},addEventListener(){}},location:{hash:''},window:{addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
+ const context={URLSearchParams,...await dependencies,console,localStorage:{getItem(key){return storage.get(key)||null},setItem(key,value){storage.set(key,value)}},document:{body:{dataset:{}},querySelector:element,querySelectorAll(selector){return selector.includes('preferred-path')?selected:[]},addEventListener(){}},location:{hash:''},window:{addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
  vm.createContext(context);vm.runInContext(fs.readFileSync('app.js','utf8').replace(/^import .*\n/gm,''),context);
  context.roles=[{id:'a',title:'Community Intern',org:'Example',location:'Boston, MA',type:'psychology',careerPath:'Clinical / pre-therapy',opportunityKind:'internship',skills:[],url:'https://example.org/a',lastSeen:new Date().toISOString()},{id:'b',title:'Survey Research Intern',org:'Example',location:'Charlotte, NC',type:'psychology',careerPath:'Research / human behavior',opportunityKind:'internship',skills:[],url:'https://example.org/b',lastSeen:new Date().toISOString()},{id:'c',title:'Management Intern',org:'Example',location:'Raleigh, NC',type:'broader',careerPath:'Broader management / leadership',opportunityKind:'internship',skills:[],url:'https://example.org/c',lastSeen:new Date().toISOString()}];
  vm.runInContext('liveRoles=roles;liveFeedLoaded=true;initializeAlertBaseline();render()',context);
@@ -120,7 +120,7 @@ test('preferences, advanced filters, shared tracker and new-listing inbox work t
 test('Seattle searches show both sections and reveal the matching entry-level role without clearing location',async()=>{
  const elements=new Map(),handlers=new Map();
  const element=id=>{if(!elements.has(id))elements.set(id,{value:'',checked:false,textContent:'',innerHTML:'',dataset:{},classList:{toggle(){},remove(){},add(){},contains(){return false}},setAttribute(){},addEventListener(name,handler){handlers.set(id+':'+name,handler)},querySelector(){return element(id+' span')},scrollIntoView(){}});return elements.get(id)};
- const context={...await dependencies,console,localStorage:{getItem(){return null}},document:{body:{dataset:{}},querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:''},window:{addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
+ const context={URLSearchParams,...await dependencies,console,localStorage:{getItem(){return null}},document:{body:{dataset:{}},querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:''},window:{addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
  vm.createContext(context);vm.runInContext(fs.readFileSync('app.js','utf8').replace(/^import .*\n/gm,''),context);
  const base={org:'Example',skills:[],description:'Undergraduate experience.',url:'https://example.org/job'};
  const data={roles:[{...base,id:'focused-seattle',title:'Talent Acquisition Intern',type:'adjacent',careerPath:'I/O psychology / workplace',opportunityKind:'internship',location:'Seattle, Washington, United States'},{...base,id:'broader-seattle',title:'Management Intern',type:'broader',careerPath:'Broader management / leadership',opportunityKind:'internship',location:'Seattle, WA'},{...base,id:'entry-seattle',title:'Behavior Technician',type:'psychology',careerPath:'Clinical / pre-therapy',opportunityKind:'entry-level',location:'Seattle, Washington'},{...base,id:'boston',title:'HR Intern',type:'adjacent',careerPath:'I/O psychology / workplace',opportunityKind:'internship',location:'Boston, MA'}]};
@@ -163,4 +163,12 @@ test('the psychology root redirects to index.html without losing search or secti
   else assert.equal(targets.length,0);
  }
  assert.doesNotMatch(fs.readFileSync('sociology.html','utf8'),/id="psychology-entry"/);
+});
+
+test('source coverage city links preselect internships and metro scope',async()=>{
+ const elements=new Map();
+ function element(id){if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',dataset:{},classList:{toggle(){},remove(){},add(){}},setAttribute(){},addEventListener(){},querySelector(){return element(id+' span')},scrollIntoView(){}});return elements.get(id)}
+ const context={URLSearchParams,...await dependencies,console,localStorage:{getItem(){return null}},document:{body:{dataset:{discipline:'sociology'}},querySelector:element,querySelectorAll(){return []},addEventListener(){}},location:{hash:'#opportunities'},window:{location:{search:'?city=Charlotte'},addEventListener(){}},fetch(){return new Promise(()=>{})},setTimeout,clearTimeout};
+ vm.createContext(context);vm.runInContext(fs.readFileSync('app.js','utf8').replace(/^import .*\n/gm,''),context);
+ assert.equal(vm.runInContext('state.location',context),'Charlotte');assert.equal(vm.runInContext('state.kind',context),'internship');assert.equal(vm.runInContext('state.metro',context),true);assert.equal(element('#location-input').value,'Charlotte');assert.equal(element('#opportunity-kind').value,'internship');
 });

@@ -1,6 +1,6 @@
 import {deadlineTime} from '../listing-quality.mjs';
 // Public employer postings only. Full descriptions are required for eligibility screening.
-export async function workdayJobs(raw, get, relevant) {
+export async function workdayJobs(raw, get, relevant, searches=['"intern"','internship']) {
   const [host, tenant, site] = raw.split('|');
   if (!host?.endsWith('.myworkdayjobs.com') || !tenant || !site) throw Error('Invalid Workday board');
   const base = `https://${host}/wday/cxs/${tenant}/${site}`;
@@ -8,7 +8,7 @@ export async function workdayJobs(raw, get, relevant) {
   const paginationErrors=[];
   const startedAt=Date.now();
   // Quoted intern plus internship avoids substring matches such as internal medicine.
-  for(const searchText of ['"intern"','internship']) {
+  for(const searchText of searches) {
     let total=null;
     const querySeen=new Set();
     for (let offset=0; offset<1000; offset+=20) {
@@ -37,7 +37,7 @@ export async function workdayJobs(raw, get, relevant) {
         const info=detail.jobPostingInfo;
         if(!info || info.canApply===false || info.posted===false) continue;
         if(deadlineTime(info.endDate)!==null && deadlineTime(info.endDate)<Date.now()) continue;
-        jobs.push({title:info.title,location:info.location||j.locationsText||'',url:info.externalUrl||`https://${host}/en-US/${site}${j.externalPath}`,description:info.jobDescription||'',date:info.startDate,deadline:info.endDate||null,source:'Workday'});
+        jobs.push({title:info.title,location:[info.location||info.jobRequisitionLocation?.descriptor||j.locationsText||'',...(info.additionalLocations||[]).map(v=>typeof v==='string'?v:v.descriptor||v.location||'')].filter((v,i,a)=>v&&a.indexOf(v)===i).join('; '),url:info.externalUrl||`https://${host}/en-US/${site}${j.externalPath}`,description:info.jobDescription||'',date:info.startDate,deadline:info.endDate||null,source:'Workday'});
       } catch(e) { errors.push(`${j.title}: ${e.message}`); }
     }
   }));

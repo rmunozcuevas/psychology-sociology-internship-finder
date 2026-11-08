@@ -5,6 +5,7 @@ import { postingKey } from './posting-key.mjs';
 import { communityJobs } from './community.mjs';
 import { smartRecruiterJobs } from './smartrecruiters.mjs';
 import { refreshLocalPrograms } from './local-programs.mjs';
+import { jibeJobs } from './jibe.mjs';
 import { workdayJobs } from './workday.mjs';
 import { opportunityKind, careerPath } from '../eligibility.mjs';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
@@ -18,7 +19,7 @@ const OUTPUT_ROOT=outputArg?pathToFileURL(resolve(outputArg)+'/'):new URL('../',
 await mkdir(OUTPUT_ROOT,{recursive:true});
 const OUT = new URL('opportunities.json',OUTPUT_ROOT);
 const providerArg=process.argv.find(a=>a.startsWith('--providers='))?.slice('--providers='.length);
-const selectedProviders=new Set((providerArg||'greenhouse,lever,ashby,workday,smartrecruiters,bamboohr,community').split(','));
+const selectedProviders=new Set((providerArg||'greenhouse,lever,ashby,workday,smartrecruiters,bamboohr,jibe,community').split(','));
 const SKILLS = ['Research methods','Data analysis','Child development','Empathy','Documentation','Teamwork','Survey design','Communication','Outreach','Writing','Interviewing','Neuroscience'];
 const SOURCES = [
   {name:'Greenhouse public career boards', url:'https://boards-api.greenhouse.io/v1/boards/{token}/jobs?content=true', kind:'greenhouse'},
@@ -26,9 +27,11 @@ const SOURCES = [
   {name:'Ashby public job boards', url:'https://api.ashbyhq.com/posting-api/job-board/{board}', kind:'ashby'}
 ];
 // The checked-in registry is always included; repository variables add extra boards.
-const registry = JSON.parse(await readFile(new URL('../employer-boards.json', import.meta.url), 'utf8'));
+const registryArg=process.argv.find(a=>a.startsWith('--registry='))?.slice('--registry='.length);
+const registry = JSON.parse(await readFile(registryArg||new URL('../employer-boards.json', import.meta.url), 'utf8'));
 const discovered=process.argv.includes('--manual-only')?{boards:[]}:JSON.parse(await readFile(new URL('../discovered-boards.json',import.meta.url),'utf8').catch(()=>'{"boards":[]}'));
-for(const board of discovered.boards||[]){const list=registry[board.kind]??=[];if(!list.some(b=>b.id===board.id))list.push(board);}
+const replacedBoards=new Set(Object.values(registry).filter(Array.isArray).flatMap(boards=>boards.flatMap(b=>b.replaces||[])));
+for(const board of discovered.boards||[]){if(replacedBoards.has(board.id))continue;const list=registry[board.kind]??=[];if(!list.some(b=>b.id===board.id))list.push(board);}
 const sourceReports=[];
 const extendMode=process.argv.includes('--extend');
 const previousHealth=extendMode?JSON.parse(await readFile(new URL('source-health.json',OUTPUT_ROOT),'utf8').catch(()=>'{"sources":[]}')):{sources:[]};
@@ -36,8 +39,9 @@ if(extendMode && (!previousHealth.updatedAt || Date.now()-Date.parse(previousHea
 const reuseSources=new Map(previousHealth.sources.filter(r=>r.status==='ok').map(r=>[`${r.kind}:${r.id}`,r]));
 async function parallel(items,limit,fn){let next=0;await Promise.all(Array.from({length:limit},async()=>{while(next<items.length)await fn(items[next++]);}));}
 async function source(kind,id,fn){
+const startedAt=new Date().toISOString();
 if(extendMode && reuseSources.has(`${kind}:${id}`)){sourceReports.push({...reuseSources.get(`${kind}:${id}`),reused:true});return;}
-try{const count=await fn();sourceReports.push({kind,id,status:'ok',scanned:count});if(sourceReports.length%50===0)console.log(`Checked ${sourceReports.length} employer feeds; ${roles.filter(r=>r.opportunityKind==='internship').length} internship candidates so far.`);}catch(e){errors.push(`${kind} ${id}: ${e.message}`);sourceReports.push({kind,id,status:'error',error:e.message});}}
+try{const count=await fn();sourceReports.push({kind,id,status:'ok',scanned:count,startedAt,checkedAt:new Date().toISOString()});if(sourceReports.length%50===0)console.log(`Checked ${sourceReports.length} employer feeds; ${roles.filter(r=>r.opportunityKind==='internship').length} internship candidates so far.`);}catch(e){errors.push(`${kind} ${id}: ${e.message}`);sourceReports.push({kind,id,status:'error',error:e.message,startedAt,checkedAt:new Date().toISOString()});}}
 const configured = (kind, variable) => selectedProviders.has(kind)?[...new Set([...(registry[kind] || []).map(b => b.id), ...(process.env[variable] || '').split(',').map(s => s.trim()).filter(Boolean)])]:[];
 const employerName = (kind, id) => registry[kind]?.find(b => b.id === id)?.employer || id;
 const boards = configured('greenhouse', 'GREENHOUSE_BOARDS');
@@ -45,6 +49,7 @@ const leverSites = configured('lever', 'LEVER_SITES');
 const ashbyBoards = configured('ashby', 'ASHBY_BOARDS');
 const smartRecruiters = configured('smartrecruiters', 'SMARTRECRUITERS_COMPANIES');
 const bambooBoards = configured('bamboohr', 'BAMBOOHR_BOARDS');
+const jibeBoards = configured('jibe','JIBE_BOARDS');
 const workdayBoards = configured('workday', 'WORKDAY_BOARDS');
 const discoverBoards = process.env.DISCOVER_ATS_BOARDS === 'true';
 const employerDirectory=JSON.parse(await readFile(new URL('../employer-directory.json',import.meta.url),'utf8').catch(()=>'{"psychologyFirst":[],"largeEmployers":[]}'));
@@ -88,25 +93,28 @@ for (const company of smartRecruiters) try {
   const result=await smartRecruiterJobs(company,get,title=>TERMS.test(title)&&Boolean(classify(title,'',true)||sociologyRelevance(title,'',sociologyRules,{preview:true})));
   for(const job of result.jobs)add({...job,originBoard:`smartrecruiters:${company}`});
   errors.push(...result.errors);
-  sourceReports.push({kind:'smartrecruiters',id:company,status:result.errors.length?'partial':'ok',scanned:result.scanned});
+  sourceReports.push({kind:'smartrecruiters',id:company,status:result.errors.length?'partial':'ok',scanned:result.scanned,checkedAt:new Date().toISOString(),error:result.errors.join('; ').slice(0,1000)||null});
   smartRecruiterStats.push({board:company,scanned:result.scanned,detailFetched:result.jobs.length,errors:result.errors.length});
-} catch(e) {errors.push(`SmartRecruiters ${company}: ${e.message}`);sourceReports.push({kind:'smartrecruiters',id:company,status:'error',error:e.message})}
+} catch(e) {errors.push(`SmartRecruiters ${company}: ${e.message}`);sourceReports.push({kind:'smartrecruiters',id:company,status:'error',error:e.message,checkedAt:new Date().toISOString()})}
 await parallel(bambooBoards,4,board=>source('bamboohr',board,async()=>{const data=await get(`https://${encodeURIComponent(board)}.bamboohr.com/careers/list`);if(!Array.isArray(data.result))throw Error('Invalid BambooHR jobs response');for(const j of data.result)add({title:j.jobOpeningName,company:j.departmentLabel||board,location:j.location?.city||j.location?.state||'',url:`https://${board}.bamboohr.com/careers/${j.id}`,description:j.jobOpeningDescription||'',date:j.datePosted,source:'BambooHR',originBoard:`bamboohr:${board}`});return data.result.length;}));
 const workdayStats=[];
 let nextWorkday=0;
 await Promise.all(Array.from({length:6},async()=>{
 while(nextWorkday<workdayBoards.length) {
 const raw=workdayBoards[nextWorkday++];
+const startedAt=new Date().toISOString();
 if(extendMode && reuseSources.has(`workday:${raw}`)){sourceReports.push({...reuseSources.get(`workday:${raw}`),reused:true});continue;}
 try {
-  const result=await workdayJobs(raw,get,title=>TERMS.test(title)&&Boolean(classify(title,'',true)||sociologyRelevance(title,'',sociologyRules,{preview:true})));
+  const board=registry.workday?.find(b=>b.id===raw);
+  const result=await workdayJobs(raw,get,title=>(board?.fetchInternshipDetails&&/\bintern(?:ship)?\b/i.test(title))||((TERMS.test(title)||new RegExp(sociologyRules.entryTitle,'i').test(title))&&Boolean(classify(title,'',true)||sociologyRelevance(title,'',sociologyRules,{preview:true}))),board?.searches);
   for(const job of result.jobs)add({...job,company:employerName('workday',raw),originBoard:`workday:${raw}`});
   errors.push(...result.errors.map(e=>`Workday ${raw}: ${e}`));
-  sourceReports.push({kind:'workday',id:raw,status:result.errors.length?'partial':'ok',scanned:result.scanned});
+  sourceReports.push({kind:'workday',id:raw,status:result.errors.length?'partial':'ok',scanned:result.scanned,startedAt,checkedAt:new Date().toISOString(),error:result.errors.join('; ').slice(0,1000)||null});
   workdayStats.push({board:raw,scanned:result.scanned,detailFetched:result.jobs.length,errors:result.errors.length});
-} catch(e) {errors.push(`Workday ${raw}: ${e.message}`);sourceReports.push({kind:'workday',id:raw,status:'error',error:e.message})}
+} catch(e) {errors.push(`Workday ${raw}: ${e.message}`);sourceReports.push({kind:'workday',id:raw,status:'error',error:e.message,startedAt,checkedAt:new Date().toISOString()})}
 }
 }));
+await parallel(jibeBoards,3,id=>source('jibe',id,async()=>{const board=registry.jibe.find(b=>b.id===id);if(!board)throw Error('Jibe board requires registry definition');const result=await jibeJobs(board,get);for(const job of result.jobs)add({...job,originBoard:`jibe:${id}`});return result.scanned;}));
 let communityCoverage={status:'not-requested'};
 try{if(selectedProviders.has('community')){const jobs=await communityJobs(get);for(const job of jobs)add({...job,originBoard:'community:searchtern'});communityCoverage={status:'ok',checkedAt:new Date().toISOString(),observedCandidates:jobs.length};}}catch(e){errors.push(`Community index: ${e.message}`);communityCoverage={status:'error',error:e.message};}
 if(!outputArg)await refreshLocalPrograms();

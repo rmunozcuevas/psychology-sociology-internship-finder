@@ -59,3 +59,22 @@ test('focused research requires psychology-related subject matter; broader manag
  assert.equal(classify('People Experience Intern','Undergraduates welcome',rules),'adjacent');
  assert.equal(classify('Management Trainee Intern','Open to undergraduates',rules),'broader');
 });
+
+test('Workday retrieves configured student searches and complete source locations',async()=>{
+ const searches=[];
+ const result=await workdayJobs('example.myworkdayjobs.com|tenant|Careers',async(url,opts)=>{
+  if(opts){searches.push(JSON.parse(opts.body).searchText);return {total:1,jobPostings:[{title:'Undergraduate Research Assistant',externalPath:'/job/test_JR123'}]};}
+  return {jobPostingInfo:{title:'Undergraduate Research Assistant',jobDescription:'Undergraduate psychology students welcome',jobRequisitionLocation:{descriptor:'Charlotte, NC'},additionalLocations:['Harrisburg, NC',{descriptor:'Matthews, NC'}],canApply:true,posted:true}};
+ },()=>true,['"research assistant"','"student research"']);
+ assert.deepEqual(searches,['"research assistant"','"student research"']);assert.equal(result.jobs.length,1);assert.equal(result.jobs[0].location,'Charlotte, NC; Harrisburg, NC; Matthews, NC');
+ assert.equal(postingKey('https://aah.wd115.myworkdayjobs.com/External/job/HR-Intern_R123'),postingKey('https://aah.wd5.myworkdayjobs.com/External/job/HR-Intern_R123'));
+});
+
+test('employer career API follows all pages and keeps descriptions for screening',async()=>{
+ const {jibeJobs}=await import('../scripts/jibe.mjs');const pages=[];
+ const result=await jibeJobs({url:'https://careers.example.org',employer:'Example',searches:['intern']},async url=>{
+  const page=Number(new URL(url).searchParams.get('page'));pages.push(page);return {totalCount:2,jobs:[{data:{req_id:String(page),title:'HR Intern',description:'Must be an undergraduate',city:'Charlotte',state:'NC',country:'US',applyable:page===1}}]};
+ });
+ assert.deepEqual(pages,[1,2]);assert.equal(result.scanned,2);assert.equal(result.jobs.length,1);assert.match(result.jobs[0].description,/undergraduate/);
+ await assert.rejects(()=>jibeJobs({url:'https://careers.example.org'},async()=>({totalCount:5,jobs:[{data:{req_id:'same'}}]})),/Incomplete career pagination/);
+});
