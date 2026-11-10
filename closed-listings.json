@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T00:51:46.198Z",
+  "updatedAt": "2026-11-10T22:29:48.762Z",
   "roles": [
     {
       "id": "https://us-erac.icims.com/jobs/566673/management-intern/job?in_iframe=1",
@@ -909,6 +909,24 @@
       "deadline": null,
       "closedAt": "2026-11-07T00:53:50.645Z",
       "reason": "Source returned HTTP 404"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/565988/management-trainee-intern-spring-2027/job?in_iframe=1",
+      "title": "Management Trainee Intern Spring 2027",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/565988/management-trainee-intern-spring-2027/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-10T22:29:48.762Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566274/spring-2027-management-trainee-internship/job?in_iframe=1",
+      "title": "Spring 2027 Management Trainee Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566274/spring-2027-management-trainee-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-10T22:29:48.762Z",
+      "reason": "Source returned HTTP 410"
     }
   ]
 }
