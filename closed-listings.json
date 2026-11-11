@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T22:29:48.762Z",
+  "updatedAt": "2026-11-11T23:38:52.498Z",
   "roles": [
     {
       "id": "https://us-erac.icims.com/jobs/566673/management-intern/job?in_iframe=1",
@@ -926,6 +926,87 @@
       "url": "https://us-erac.icims.com/jobs/566274/spring-2027-management-trainee-internship/job?in_iframe=1",
       "deadline": null,
       "closedAt": "2026-11-10T22:29:48.762Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://ideas-sas.icims.com/jobs/42654/account-management-intern/job?in_iframe=1",
+      "title": "Account Management Intern",
+      "org": "Ideas Sas",
+      "url": "https://ideas-sas.icims.com/jobs/42654/account-management-intern/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-11T23:38:52.498Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://careers-magnera.icims.com/jobs/27591/hr%2c-total-rewards-intern/job?in_iframe=1",
+      "title": "HR, Total Rewards Intern",
+      "org": "Magnera",
+      "url": "https://careers-magnera.icims.com/jobs/27591/hr%2c-total-rewards-intern/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-11T23:38:52.498Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/571053/management-trainee-intern-spring-2027/job?in_iframe=1",
+      "title": "Management Trainee Intern Spring 2027",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/571053/management-trainee-intern-spring-2027/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-11T23:38:52.498Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/564444/management-trainee-winter-intern/job?in_iframe=1",
+      "title": "Management Trainee Winter Intern",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/564444/management-trainee-winter-intern/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-11T23:38:52.498Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566633/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566633/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-11T23:38:52.498Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566716/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566716/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-11T23:38:52.498Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566717/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566717/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-11T23:38:52.498Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566719/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566719/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-11T23:38:52.498Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566817/spring-2027-management-trainee-intern--burlington%2c-vt/job?in_iframe=1",
+      "title": "Spring 2027 Management Trainee Intern- Burlington, VT",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566817/spring-2027-management-trainee-intern--burlington%2c-vt/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-11T23:38:52.498Z",
       "reason": "Source returned HTTP 410"
     }
   ]
