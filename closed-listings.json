@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T23:38:52.498Z",
+  "updatedAt": "2026-11-12T22:54:55.073Z",
   "roles": [
     {
       "id": "https://us-erac.icims.com/jobs/566673/management-intern/job?in_iframe=1",
@@ -934,7 +934,7 @@
       "org": "Ideas Sas",
       "url": "https://ideas-sas.icims.com/jobs/42654/account-management-intern/job?in_iframe=1",
       "deadline": null,
-      "closedAt": "2026-11-11T23:38:52.498Z",
+      "closedAt": "2026-11-12T22:54:55.073Z",
       "reason": "Source returned HTTP 410"
     },
     {
@@ -943,7 +943,7 @@
       "org": "Magnera",
       "url": "https://careers-magnera.icims.com/jobs/27591/hr%2c-total-rewards-intern/job?in_iframe=1",
       "deadline": null,
-      "closedAt": "2026-11-11T23:38:52.498Z",
+      "closedAt": "2026-11-12T22:54:55.073Z",
       "reason": "Source returned HTTP 410"
     },
     {
@@ -952,7 +952,7 @@
       "org": "Us Erac",
       "url": "https://us-erac.icims.com/jobs/571053/management-trainee-intern-spring-2027/job?in_iframe=1",
       "deadline": null,
-      "closedAt": "2026-11-11T23:38:52.498Z",
+      "closedAt": "2026-11-12T22:54:55.073Z",
       "reason": "Source returned HTTP 410"
     },
     {
@@ -961,7 +961,7 @@
       "org": "Us Erac",
       "url": "https://us-erac.icims.com/jobs/564444/management-trainee-winter-intern/job?in_iframe=1",
       "deadline": null,
-      "closedAt": "2026-11-11T23:38:52.498Z",
+      "closedAt": "2026-11-12T22:54:55.073Z",
       "reason": "Source returned HTTP 410"
     },
     {
@@ -970,7 +970,7 @@
       "org": "Us Erac",
       "url": "https://us-erac.icims.com/jobs/566633/sales-management-trainee-intern--spring/job?in_iframe=1",
       "deadline": null,
-      "closedAt": "2026-11-11T23:38:52.498Z",
+      "closedAt": "2026-11-12T22:54:55.073Z",
       "reason": "Source returned HTTP 410"
     },
     {
@@ -979,7 +979,7 @@
       "org": "Us Erac",
       "url": "https://us-erac.icims.com/jobs/566716/sales-management-trainee-intern--spring/job?in_iframe=1",
       "deadline": null,
-      "closedAt": "2026-11-11T23:38:52.498Z",
+      "closedAt": "2026-11-12T22:54:55.073Z",
       "reason": "Source returned HTTP 410"
     },
     {
@@ -988,7 +988,7 @@
       "org": "Us Erac",
       "url": "https://us-erac.icims.com/jobs/566717/sales-management-trainee-intern--spring/job?in_iframe=1",
       "deadline": null,
-      "closedAt": "2026-11-11T23:38:52.498Z",
+      "closedAt": "2026-11-12T22:54:55.073Z",
       "reason": "Source returned HTTP 410"
     },
     {
@@ -997,7 +997,7 @@
       "org": "Us Erac",
       "url": "https://us-erac.icims.com/jobs/566719/sales-management-trainee-intern--spring/job?in_iframe=1",
       "deadline": null,
-      "closedAt": "2026-11-11T23:38:52.498Z",
+      "closedAt": "2026-11-12T22:54:55.073Z",
       "reason": "Source returned HTTP 410"
     },
     {
@@ -1006,7 +1006,70 @@
       "org": "Us Erac",
       "url": "https://us-erac.icims.com/jobs/566817/spring-2027-management-trainee-intern--burlington%2c-vt/job?in_iframe=1",
       "deadline": null,
-      "closedAt": "2026-11-11T23:38:52.498Z",
+      "closedAt": "2026-11-12T22:54:55.073Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://careers-slco.icims.com/jobs/41976/gang-prevention-education-specialist-intern--sheriff%27s-office/job?in_iframe=1",
+      "title": "Gang Prevention Education Specialist Intern- Sheriff's Office",
+      "org": "SLCO",
+      "url": "https://careers-slco.icims.com/jobs/41976/gang-prevention-education-specialist-intern--sheriff%27s-office/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-12T22:54:55.073Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://careers.jameshardie.com/job/Fontana-Human-Factors-Intern%2C-UX-Research-CA-92337/1434392700",
+      "title": "Human Factors Intern, UX Research",
+      "org": "Jameshardie",
+      "url": "https://careers.jameshardie.com/job/Fontana-Human-Factors-Intern%2C-UX-Research-CA-92337/1434392700/",
+      "deadline": null,
+      "closedAt": "2026-11-12T22:54:55.073Z",
+      "reason": "Source explicitly says this posting is closed"
+    },
+    {
+      "id": "https://careers.labcorp.com/job/2630118",
+      "title": "Intern - Talent Acquisition Strategy Team",
+      "org": "Labcorp",
+      "url": "https://careers.labcorp.com/job/2630118",
+      "deadline": null,
+      "closedAt": "2026-11-12T22:54:55.073Z",
+      "reason": "Source returned HTTP 404"
+    },
+    {
+      "id": "https://idccareers-idg.icims.com/jobs/7137/program-support-coop/job?in_iframe=1",
+      "title": "Program Support CoOp",
+      "org": "Idccareers Idg",
+      "url": "https://idccareers-idg.icims.com/jobs/7137/program-support-coop/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-12T22:54:55.073Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/565833/spring-2027-sales-management-trainee-intern----atlantic-county%2c-nj-%28egg-harbor-township%29/job?in_iframe=1",
+      "title": "Spring 2027 Sales Management Trainee Intern - Atlantic County, NJ (Egg Harbor Township)",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/565833/spring-2027-sales-management-trainee-intern----atlantic-county%2c-nj-%28egg-harbor-township%29/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-12T22:54:55.073Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/565831/spring-2027-sales-management-trainee-intern----southern-delaware/job?in_iframe=1",
+      "title": "Spring 2027 Sales Management Trainee Intern - Southern Delaware",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/565831/spring-2027-sales-management-trainee-intern----southern-delaware/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-12T22:54:55.073Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/569706/summer-2027-management-trainee-internship/job?in_iframe=1",
+      "title": "Summer 2027 Management Trainee Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/569706/summer-2027-management-trainee-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-12T22:54:55.073Z",
       "reason": "Source returned HTTP 410"
     }
   ]
