@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T00:45:58.991Z",
+  "updatedAt": "2026-11-17T23:50:42.881Z",
   "roles": [
     {
       "id": "https://us-erac.icims.com/jobs/566673/management-intern/job?in_iframe=1",
@@ -1169,6 +1169,123 @@
       "url": "https://careers-healthequity.icims.com/jobs/8305/social-media-employee-advocacy-intern/job?in_iframe=1",
       "deadline": null,
       "closedAt": "2026-11-17T00:45:58.991Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "smartrecruiters:wellmarkinc:744000148917398",
+      "title": "Health Services, Clinical Quality and Training Internship",
+      "org": "Wellmarkinc",
+      "url": "https://jobs.smartrecruiters.com/WellmarkInc/744000148917398",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source explicitly says this posting is closed"
+    },
+    {
+      "id": "smartrecruiters:cityofnewyork:3743990015335796",
+      "title": "Community Education Intern",
+      "org": "Cityofnewyork",
+      "url": "https://jobs.smartrecruiters.com/CityOfNewYork/3743990015335796",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source explicitly says this posting is closed"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566765/management-trainee-intern---la-crosse/job?in_iframe=1",
+      "title": "Management Trainee Intern - La Crosse",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566765/management-trainee-intern---la-crosse/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://careers-steinhafels.icims.com/jobs/2273/sales-and-leadership-internship/job?in_iframe=1",
+      "title": "Sales and Leadership Internship",
+      "org": "Steinhafels",
+      "url": "https://careers-steinhafels.icims.com/jobs/2273/sales-and-leadership-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/567171/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/567171/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566631/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566631/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566628/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566628/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566626/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566626/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566629/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566629/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566621/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566621/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566445/spring-2027-management-intern---knoxville/job?in_iframe=1",
+      "title": "Spring 2027 Management Intern - Knoxville",
+      "org": "Enterprise Mobility",
+      "url": "https://us-erac.icims.com/jobs/566445/spring-2027-management-intern---knoxville/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://careers-healthpro-rehab.icims.com/jobs/138421/entry-level-behavior-technician-%28bt%29/job?in_iframe=1",
+      "title": "Entry-Level Behavior Technician (BT)",
+      "org": "Healthpro Rehab",
+      "url": "https://careers-healthpro-rehab.icims.com/jobs/138421/entry-level-behavior-technician-%28bt%29/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://careers-bluesprigpediatrics.icims.com/jobs/24208/registered-behavior-technician-%28rbt%29-entry-level/job?in_iframe=1",
+      "title": "Registered Behavior Technician (RBT) Entry Level",
+      "org": "Bluesprigpediatrics",
+      "url": "https://careers-bluesprigpediatrics.icims.com/jobs/24208/registered-behavior-technician-%28rbt%29-entry-level/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-17T23:50:42.881Z",
       "reason": "Source returned HTTP 410"
     }
   ]
