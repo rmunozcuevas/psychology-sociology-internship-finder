@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T23:50:42.881Z",
+  "updatedAt": "2026-11-18T23:21:44.942Z",
   "roles": [
     {
       "id": "https://us-erac.icims.com/jobs/566673/management-intern/job?in_iframe=1",
@@ -1286,6 +1286,42 @@
       "url": "https://careers-bluesprigpediatrics.icims.com/jobs/24208/registered-behavior-technician-%28rbt%29-entry-level/job?in_iframe=1",
       "deadline": null,
       "closedAt": "2026-11-17T23:50:42.881Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "smartrecruiters:thepanarogroup:744000156308831",
+      "title": "INTERNSHIP: Recruiting and Operations Assistant",
+      "org": "Thepanarogroup",
+      "url": "https://jobs.smartrecruiters.com/ThePanaroGroup/744000156308831",
+      "deadline": null,
+      "closedAt": "2026-11-18T23:21:44.942Z",
+      "reason": "Source explicitly says this posting is closed"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566681/management-intern/job?in_iframe=1",
+      "title": "Management Intern",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566681/management-intern/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-18T23:21:44.942Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/567173/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/567173/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-18T23:21:44.942Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/567172/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "title": "Sales Management Trainee Intern- Spring",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/567172/sales-management-trainee-intern--spring/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-18T23:21:44.942Z",
       "reason": "Source returned HTTP 410"
     }
   ]
