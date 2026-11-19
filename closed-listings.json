@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T23:21:44.942Z",
+  "updatedAt": "2026-11-19T23:30:11.778Z",
   "roles": [
     {
       "id": "https://us-erac.icims.com/jobs/566673/management-intern/job?in_iframe=1",
@@ -1322,6 +1322,78 @@
       "url": "https://us-erac.icims.com/jobs/567172/sales-management-trainee-intern--spring/job?in_iframe=1",
       "deadline": null,
       "closedAt": "2026-11-18T23:21:44.942Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/568827/fall-winter-sales-management-trainee-internship---tallahassee%2c-fl/job?in_iframe=1",
+      "title": "Fall/Winter Sales Management Trainee Internship - Tallahassee, FL",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/568827/fall-winter-sales-management-trainee-internship---tallahassee%2c-fl/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-19T23:30:11.778Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/564450/management-trainee-winter-intern/job?in_iframe=1",
+      "title": "Management Trainee Winter Intern",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/564450/management-trainee-winter-intern/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-19T23:30:11.778Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "smartrecruiters:pilotcompany:744000148331709",
+      "title": "Program Intern, Leadership Development",
+      "org": "Pilotcompany",
+      "url": "https://jobs.smartrecruiters.com/pilotcompany/744000148331709",
+      "deadline": null,
+      "closedAt": "2026-11-19T23:30:11.778Z",
+      "reason": "Source explicitly says this posting is closed"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/566268/spring-2027-management-trainee-internship/job?in_iframe=1",
+      "title": "Spring 2027 Management Trainee Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/566268/spring-2027-management-trainee-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-19T23:30:11.778Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://careers-nrdc.icims.com/jobs/6066/summer-2027-knowledge-management-intern/job?in_iframe=1",
+      "title": "Summer 2027 Knowledge Management Intern",
+      "org": "NRDC",
+      "url": "https://careers-nrdc.icims.com/jobs/6066/summer-2027-knowledge-management-intern/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-19T23:30:11.778Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://careers-nrdc.icims.com/jobs/6047/summer-2027-adaptation-advocacy-intern/job?in_iframe=1",
+      "title": "Summer 2027 Adaptation Advocacy Intern",
+      "org": "NRDC",
+      "url": "https://careers-nrdc.icims.com/jobs/6047/summer-2027-adaptation-advocacy-intern/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-19T23:30:11.778Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://careers-nrdc.icims.com/jobs/6069/summer-2027-green-finance-advocacy-intern/job?in_iframe=1",
+      "title": "Summer 2027 Green Finance Advocacy Intern",
+      "org": "NRDC",
+      "url": "https://careers-nrdc.icims.com/jobs/6069/summer-2027-green-finance-advocacy-intern/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-19T23:30:11.778Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://careers-nrdc.icims.com/jobs/6053/summer-2027-insurance-policy-research-intern/job?in_iframe=1",
+      "title": "Summer 2027 Insurance Policy Research Intern",
+      "org": "NRDC",
+      "url": "https://careers-nrdc.icims.com/jobs/6053/summer-2027-insurance-policy-research-intern/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-19T23:30:11.778Z",
       "reason": "Source returned HTTP 410"
     }
   ]
