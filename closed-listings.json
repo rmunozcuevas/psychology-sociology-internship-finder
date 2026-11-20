@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T23:30:11.778Z",
+  "updatedAt": "2026-11-20T23:03:45.793Z",
   "roles": [
     {
       "id": "https://us-erac.icims.com/jobs/566673/management-intern/job?in_iframe=1",
@@ -1394,6 +1394,168 @@
       "url": "https://careers-nrdc.icims.com/jobs/6053/summer-2027-insurance-policy-research-intern/job?in_iframe=1",
       "deadline": null,
       "closedAt": "2026-11-19T23:30:11.778Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/567408/management-trainee-internship---spring-2027/job?in_iframe=1",
+      "title": "Management Trainee Internship - Spring 2027",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/567408/management-trainee-internship---spring-2027/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/567275/management-trainee-internship---spring-2027/job?in_iframe=1",
+      "title": "Management Trainee Internship - Spring 2027",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/567275/management-trainee-internship---spring-2027/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/567276/management-trainee-internship---summer-2027/job?in_iframe=1",
+      "title": "Management Trainee Internship - Summer 2027",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/567276/management-trainee-internship---summer-2027/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/564977/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/564977/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/564976/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/564976/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/565338/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/565338/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/565344/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/565344/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/565341/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/565341/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/564974/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/564974/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/564978/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/564978/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/564975/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/564975/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/565345/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/565345/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/564979/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/564979/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/563956/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/563956/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/563957/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/563957/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/563954/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/563954/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/563955/management-trainee-summer-internship/job?in_iframe=1",
+      "title": "Management Trainee Summer Internship",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/563955/management-trainee-summer-internship/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
+      "reason": "Source returned HTTP 410"
+    },
+    {
+      "id": "https://us-erac.icims.com/jobs/569874/summer-2027-management-trainee-intern---indianapolis-airport/job?in_iframe=1",
+      "title": "Summer 2027 Management Trainee Intern - Indianapolis Airport",
+      "org": "Us Erac",
+      "url": "https://us-erac.icims.com/jobs/569874/summer-2027-management-trainee-intern---indianapolis-airport/job?in_iframe=1",
+      "deadline": null,
+      "closedAt": "2026-11-20T23:03:45.793Z",
       "reason": "Source returned HTTP 410"
     }
   ]
